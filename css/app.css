@@ -1,0 +1,9 @@
+ol {
+	list-style: none;
+		
+}
+
+ol li {
+	background-color: #A4A4A4;
+	padding: 2px 2px 2px 2px;
+}
