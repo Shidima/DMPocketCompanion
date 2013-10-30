@@ -6,11 +6,13 @@
         version   = "0.1.0">
 
     <!-- versionCode is optional and Android only -->
+    <gap:platform name="android" />
+    <icon src="icon.png" />
 
     <name>DMs Pocket Companion</name>
 
     <description>
-        An example for phonegap build docs. 
+        A little helper for the busy DM. 
     </description>
 
     <author href="https://build.phonegap.com" email="menicus@gmail.com">
