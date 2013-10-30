@@ -1,10 +1,13 @@
 var charList = new Array();
+var number = 0;
 
 // Add a character to the list
 var addCharacter = function() {
+    number += 1
     var list = document.getElementById('initList');					// Get the (un)orderd list 
-    var charName = document.getElementById('textBox').value;		// Get the textbox value
+    var charName = document.getElementById('textBox').value + " " + number + " ";		// Get the textbox value
     var listItem = document.createElement('li');					// Create the 'li' item
+    listItem.setAttribute('id', number);
 
     // Move up link
     var moveUpLink = document.createElement('a');
@@ -30,11 +33,11 @@ var removeCharacter = function(link) {
 	link.parentNode.parentNode.removeChild(link.parentNode );
 };
 
-var moveUp = function(link) {
-    //if (true) {
-        console.log(link);
-        console.log(link.parentNode.nextSibling);
-        link.parentNode.insertBefore(link.parentNode, link.nextSibling);
-        //link.parentNode.insertBefore(li, link.previousSibling);
-   // }
+var moveUp = function(item) {
+    var moveIt = item.parentNode;
+    var list = document.getElementById('initList'); 
+//    console.log(moveIt);
+//    console.log(moveIt.previousSibling);
+    list.insertBefore(moveIt, moveIt.previousSibling);    
+
 };
