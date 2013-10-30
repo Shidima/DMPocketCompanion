@@ -15,6 +15,12 @@ var addCharacter = function() {
     moveUpLink.setAttribute('href', '#');                           // Set the href atribute
     moveUpLink.setAttribute('onclick', 'moveUp(this)');             // Set the onclick method
 
+    // Move Down link
+    var moveDownLink = document.createElement('a');
+    moveDownLink.appendChild(document.createTextNode(' down'));
+    moveDownLink.setAttribute('href', '#');                           // Set the href atribute
+    moveDownLink.setAttribute('onclick', 'moveDown(this)');             // Set the onclick method
+
     // Remove link
     var removeLink = document.createElement('a');					// Create the romve link
     removeLink.appendChild(document.createTextNode(' remove')); 	// Add the text 
@@ -23,6 +29,7 @@ var addCharacter = function() {
     
     listItem.appendChild(document.createTextNode(charName));		// add the textbox var to the li
     listItem.appendChild(moveUpLink);
+    listItem.appendChild(moveDownLink);
     listItem.appendChild(removeLink);								// add the link to the li
     list.appendChild(listItem);										// add the li item to the list
 };
@@ -36,8 +43,11 @@ var removeCharacter = function(link) {
 var moveUp = function(item) {
     var moveIt = item.parentNode;
     var list = document.getElementById('initList'); 
-//    console.log(moveIt);
-//    console.log(moveIt.previousSibling);
     list.insertBefore(moveIt, moveIt.previousSibling);    
+};
 
+var moveDown = function(item) {
+    var moveIt = item.parentNode;
+    var list = document.getElementById('initList'); 
+    list.insertBefore(moveIt, moveIt.nextSibling.nextSibling);    
 };
