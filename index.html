@@ -5,22 +5,55 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
   <title>DM Pocket Companion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
 
   <link rel="stylesheet" href="css/app.css" />
 
 </head>
 <body>
+   <nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
 
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#"><span class="glyphicon glyphicon-floppy-open"></span> Load</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-floppy-save"></span> Save</a></li>
+      </ul>      
+    </div><!-- /.navbar-collapse -->
+  </nav>
   <!-- body content here -->
   <div id="main">
-    <div id="header">
-      <input type="text" id="textBox" class="inputBox"/>
-      <button onClick="addCharacter()" class="submit">Add</button>
-    </div>
+    <div class="input-group">
+      <input type="text" class="form-control" id="textBox">
+      <span class="input-group-btn">
+        <button class="btn btn-default" onClick="addCharacter()"type="button">Go!</button>
+      </span>
+    </div><!-- /input-group -->
     <ol id="initList">
     </ol>
   </div>
 
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/custom.js"></script>
 
 </body>
